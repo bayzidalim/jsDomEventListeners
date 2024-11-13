@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Deligate</title>
+</head>
+<body>
+    <h1>Explore Event deligate</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Sunt, repellat animi?</li>
+            <li class="item">Iste, tenetur qui.</li>
+            <li class="item">Ullam, deleniti quaerat?</li>
+            <li class="item">Nisi, officia nesciunt?</li>
+            <li class="item">Eius, accusantium tempore.</li>
+        </ul>
+    </section>
+    <script>
+        const items=document.getElementsByClassName('item');
+        for(const item of items){
+            item.addEventListener('click',function(event){
+                console.log(event.target.parentNode);
+            })
+        }
+    </script>
+</body>
+</html>
